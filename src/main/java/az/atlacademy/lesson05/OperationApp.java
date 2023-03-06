@@ -13,5 +13,7 @@ public class OperationApp {
         System.out.println(a%b);
         System.out.println(++a);
         System.out.println(--b);
+
+
     }
 }
