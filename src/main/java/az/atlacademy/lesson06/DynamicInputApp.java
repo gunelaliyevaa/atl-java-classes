@@ -9,6 +9,6 @@ public class DynamicInputApp {
 
         System.out.printf("%.5f",var);
 
-
     }
 }
+
