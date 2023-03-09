@@ -14,7 +14,7 @@ public class FizzBuzz {
             } else if (n % 5 == 0) {
                 System.out.println("Buzz");
             } else {
-                System.out.println("n");
+                System.out.println(n);
         }
     }
 }
