@@ -19,6 +19,7 @@ public class DigitOperationsApp {
             sum += rem;
             prod *= rem;
         }
+
         // 3. output
         System.out.printf("Sum of Digits is: %d\n", sum);
         System.out.printf("Prod of Digits is: %d\n", prod);
