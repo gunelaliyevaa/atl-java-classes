@@ -9,7 +9,7 @@ public class SumOfDigits {
         Scanner scan = new Scanner(System.in);
         int num = scan.nextInt();
         int res = 0;
-        for (; num > 0; ) {
+        for ( ; num > 0; ) {
             res += num % 10;
             num = num / 10;
         }
