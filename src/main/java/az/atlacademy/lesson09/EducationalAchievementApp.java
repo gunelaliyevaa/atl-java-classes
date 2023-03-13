@@ -2,7 +2,7 @@ package az.atlacademy.lesson09;
 
 import java.util.Scanner;
 
-public class EducationalAchievementsApp {
+public class EducationalAchievementApp {
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);
