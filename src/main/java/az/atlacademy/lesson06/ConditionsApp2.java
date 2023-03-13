@@ -7,32 +7,20 @@ public class ConditionsApp2 {
         Scanner scan = new Scanner(System.in);
         int var = scan.nextInt();
 
-        if (var == 1) {
-            System.out.println("January");
-        } else if (var == 2) {
-            System.out.println("February");
-        } else if (var == 3) {
-            System.out.println("March");
-        } else if (var == 4) {
-            System.out.println("April");
-        } else if (var == 5) {
-            System.out.println("May");
-        } else if (var == 6) {
-            System.out.println("June");
-        } else if (var == 7) {
-            System.out.println("July");
-        } else if (var == 8) {
-            System.out.println("August");
-        } else if (var == 9) {
-            System.out.println("September");
-        } else if (var == 10) {
-            System.out.println("October");
-        } else if (var == 11) {
-            System.out.println("November");
-        } else if (var == 12) {
-            System.out.println("December");
-        } else {
-            System.out.println("Not defined");
+        switch (var) {
+            case 1 -> System.out.println("January");
+            case 2 -> System.out.println("February");
+            case 3 -> System.out.println("March");
+            case 4 -> System.out.println("April");
+            case 5 -> System.out.println("May");
+            case 6 -> System.out.println("June");
+            case 7 -> System.out.println("July");
+            case 8 -> System.out.println("August");
+            case 9 -> System.out.println("September");
+            case 10 -> System.out.println("October");
+            case 11 -> System.out.println("November");
+            case 12 -> System.out.println("December");
+            default -> System.out.println("Not defined");
         }
 
         if (var > 12 || var <= 0) {
