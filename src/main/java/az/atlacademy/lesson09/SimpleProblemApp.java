@@ -7,7 +7,6 @@ public class SimpleProblemApp {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
 
-
         System.out.println(n / 10);
         System.out.println(n % 10);
     }
