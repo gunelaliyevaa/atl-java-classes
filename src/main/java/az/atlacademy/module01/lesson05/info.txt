@@ -1,6 +1,0 @@
-Operations
-Arithmetic operations
-Relational operations
-Logical operations
-Assignment operations
-Miscellaneous operations
