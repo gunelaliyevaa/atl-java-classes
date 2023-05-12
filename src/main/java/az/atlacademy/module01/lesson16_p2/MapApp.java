@@ -8,8 +8,8 @@ public class MapApp {
         humanMap.put("p1", "Lana");
         humanMap.put("p2", "Alex");
         humanMap.put("p3", "Nemo");
-        humanMap.put("p4", "");
-        humanMap.put("", "Idk");
+        humanMap.put("p4", null);
+        humanMap.put(null, "Idk");
 
         System.out.println(humanMap);
 
