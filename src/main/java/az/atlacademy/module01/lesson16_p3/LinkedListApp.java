@@ -28,4 +28,5 @@ public class LinkedListApp {
         linkedList.removeFirstOccurrence("c");
         System.out.println(linkedList);
     }
+
 }
