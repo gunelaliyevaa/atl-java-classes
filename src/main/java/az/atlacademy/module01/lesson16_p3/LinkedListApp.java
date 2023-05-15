@@ -3,6 +3,7 @@ package az.atlacademy.module01.lesson16_p3;
 import java.util.LinkedList;
 
 public class LinkedListApp {
+
     public static void main(String[] args) {
         LinkedList<String> linkedList = new LinkedList<>();
 
