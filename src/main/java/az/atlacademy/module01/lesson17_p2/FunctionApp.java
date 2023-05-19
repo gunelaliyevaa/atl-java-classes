@@ -10,13 +10,13 @@ public class FunctionApp {
     public static void main(String[] args) {
         List<Integer> integerList = new ArrayList<>();
 
-        Function<List, IntSummaryStatistics> statisticsFunction = new Function<List, IntSummaryStatistics>() {
+        Function<List<Integer>, IntSummaryStatistics> statisticsFunction = new Function<List<Integer>, IntSummaryStatistics>() {
             @Override
-            public IntSummaryStatistics apply(List list) {
+            public IntSummaryStatistics apply(List<Integer> list) {
                 IntSummaryStatistics statistics = new IntSummaryStatistics();
 
-                for (Object number : list) {
-                    statistics.accept((Integer) number);
+                for (Integer number : list) {
+                    statistics.accept(number);
                 }
                 return statistics;
             }
