@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Random;
 import java.util.Set;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class RandomNumListApp {
 
@@ -13,7 +12,7 @@ public class RandomNumListApp {
                 .ints(20, 1, 50)
                 .filter(num -> num % 2 == 0)
                 .boxed()
-                .collect(Collectors.toList()); // Without line 15, the list won't be created because types are primitive
+                .collect(Collectors.toList()); // Without line 14, the list won't be created because types are primitive
 
         System.out.println(evenNums);
 
