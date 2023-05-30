@@ -28,9 +28,9 @@ public class JsonStudentApp {
         try (ObjectInputStream ois = new ObjectInputStream(
                 new BufferedInputStream(new FileInputStream(RESOURCE + "student.ser")))) {
             byte[] studentInBytes = (byte[]) ois.readObject();
-            Student deserializedStudent = objectMapper.readValue(studentInBytes, Student.class);  //1. How do I assign the read object to student without
-            System.out.println(deserializedStudent);                                              // creating default empty constructor in student class?
-        } catch (IOException | ClassNotFoundException e) {                                        //2. Should we not check with 'instanceof'?
+            Student deserializedStudent = objectMapper.readValue(studentInBytes, Student.class);    //'instanceof'?
+            System.out.println(deserializedStudent);
+        } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();;
         }
     }
