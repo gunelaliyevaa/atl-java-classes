@@ -16,13 +16,13 @@ public class JsonStudentApp {
     public static void main(String[] args) throws RuntimeException {
         Student student1 = new Student(155, "Adam", 90);
         //write
-        ObjectMapper objectMapper = new ObjectMapper();
+        final ObjectMapper objectMapper = new ObjectMapper();
         try (ObjectOutputStream oos = new ObjectOutputStream(
                 new BufferedOutputStream(new FileOutputStream(RESOURCE + "student.ser")))) {
             byte[] studentInBytes = objectMapper.writeValueAsBytes(student1);
             oos.writeObject(studentInBytes);
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
         }
         // read
         try (ObjectInputStream ois = new ObjectInputStream(
@@ -31,14 +31,9 @@ public class JsonStudentApp {
             Student deserializedStudent = objectMapper.readValue(studentInBytes, Student.class);  //1. How do I assign the read object to student without
             System.out.println(deserializedStudent);                                              // creating default empty constructor in student class?
         } catch (IOException | ClassNotFoundException e) {                                        //2. Should we not check with 'instanceof'?
-            throw new RuntimeException(e);
+            e.printStackTrace();;
         }
     }
 
 }
-/*
-todo:
- 1.Write Student object to file with Object Output Stream
- 2.Read Student object from file with Object Input Stream
- 3.Use JSON mapper in both operations
-*/
+
