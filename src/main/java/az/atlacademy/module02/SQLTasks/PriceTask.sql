@@ -1,0 +1,1 @@
+SELECT DISTINCT(CategoryID), SUM(Price) AS TotalPrice FROM Products GROUP BY CategoryID;
