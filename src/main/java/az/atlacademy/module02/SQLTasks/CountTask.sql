@@ -1,3 +1,3 @@
-SELECT COUNT(Customers)
+SELECT COUNT(*)
 FROM Customers
 WHERE Country = 'Germany';
