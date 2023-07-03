@@ -1,0 +1,1 @@
+SELECT * FROM Products WHERE LENGTH(ProductName) = (SELECT MAX(LENGTH(ProductName)) FROM Products);
