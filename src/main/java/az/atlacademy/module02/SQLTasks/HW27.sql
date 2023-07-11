@@ -5,7 +5,7 @@ CREATE TABLE Book
     author           VARCHAR(100),
     publisher        VARCHAR(100),
     publication_year INTEGER,
-    no_copies        INTEGER
+    no_of_copies        INTEGER
 );
 
 CREATE TABLE Reader
