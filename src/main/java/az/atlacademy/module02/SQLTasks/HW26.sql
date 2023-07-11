@@ -57,6 +57,11 @@ SELECT *
 FROM Products
 WHERE Price = (SELECT MIN(Price) FROM Products);
 
+SELECT *
+FROM Products
+WHERE Price IN (SELECT MIN(Price) FROM Products UNION SELECT MAX(Price) FROM Products);
+
+
 CREATE TABLE Students
 (
     ID       SERIAL PRIMARY KEY,
