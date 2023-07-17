@@ -9,10 +9,20 @@ import java.util.List;
 public class JdbcApp {
 
     public static final String getAllReadersSql = "SELECT * FROM reader;";
+    public static final String UpdateReadersSql = "UPDATE reader SET phone_number = ? WHERE phone_number>7";
 
     public static void main(String[] args) {
-        for (Reader readers : getAllReaders()) {
-            System.out.println(readers.toString());
+        getAllReaders().forEach(System.out::println);
+        UpdatePhoneNumber(BigDecimal.valueOf(5556667));
+    }
+
+    public static void UpdatePhoneNumber(BigDecimal phoneNumber) {
+        try (Connection connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/postgres", "postgres", "mysecretpassword")) {
+            PreparedStatement query = connection.prepareStatement(UpdateReadersSql);
+            query.setBigDecimal(1, phoneNumber);
+            int affectedRows = query.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 
