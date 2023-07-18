@@ -11,8 +11,7 @@ CREATE TABLE Products
     Price         DECIMAL(10, 2),
     Quantity      INT,
     Description   TEXT,
-    fk_CategoryID INT,
-    FOREIGN KEY (fk_CategoryID) REFERENCES Categories (CategoryID)
+    fk_CategoryID INT REFERENCES Categories (CategoryID)
 );
 
 CREATE TABLE Customers
@@ -29,18 +28,15 @@ CREATE TABLE Orders
 (
     OrderID       SERIAL PRIMARY KEY,
     OrderDate     DATE,
-    fk_CustomerID INT,
-    FOREIGN KEY (fk_CustomerID) REFERENCES Customers (CustomerID)
+    fk_CustomerID INT REFERENCES Customers (CustomerID)
 );
 
 CREATE TABLE OrderDetails
 (
     OrderDetailID SERIAL PRIMARY KEY,
     Quantity      INT,
-    fk_OrderID    INT,
-    fk_ProductID  INT,
-    FOREIGN KEY (fk_OrderID) REFERENCES Orders (OrderID),
-    FOREIGN KEY (fk_ProductID) REFERENCES Products (ProductID)
+    fk_OrderID    INT REFERENCES Orders (OrderID),
+    fk_ProductID  INT REFERENCES Products (ProductID)
 );
 
 --insert statements
